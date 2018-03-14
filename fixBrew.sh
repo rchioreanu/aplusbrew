@@ -14,6 +14,7 @@ if [ "git config --list | grep http" ]
 then
     repair_brew
 else
+    echo "Setting a vpn"
     git config --global http.https://github.com.proxy https://121.129.127.209:80
     repair_brew
 fi
