@@ -10,13 +10,8 @@ function repair_brew {
     echo "--------> Done. Please restart $TERM_PROGRAM to apply settings. 😄 <--------"
 }
 
-if [ "git config --list | grep http" ]
-then
-    repair_brew
-else
-    echo "Setting a vpn"
-    git config --global http.https://github.com.proxy https://121.129.127.209:80
-    repair_brew
-fi
+echo "Setting a vpn"
+git config --global http.https://github.com.proxy https://121.129.127.209:80
+repair_brew
 
 exit;
