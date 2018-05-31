@@ -11,7 +11,6 @@ function repair_brew {
 }
 
 echo "Setting a vpn"
-git config --global http.https://github.com.proxy https://121.129.127.209:80
 repair_brew
 
 exit;
